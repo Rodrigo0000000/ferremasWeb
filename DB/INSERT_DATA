@@ -1,0 +1,78 @@
+INSERT INTO CATEGORIAS (NOMBRE, DESCRIPCION) VALUES
+('Herramientas', 'Herramientas manuales y eléctricas'),
+('Accesorios', 'Accesorios para construcción y ferretería'),
+('Casco', 'Cascos de seguridad industrial'),
+('Ladrillos', 'Ladrillos de arcilla y bloques'),
+('Enchufes', 'Enchufes y tomacorrientes'),
+('Focos', 'Focos LED, halógenos y más'),
+('Instalaciones', 'Materiales para instalaciones eléctricas'),
+('Mantenimiento', 'Productos para mantenimiento y reparación');
+
+INSERT INTO ITEMS (NOMBRE, PRECIO, CANTIDAD, CATEGORIA, DESCRIPCION) VALUES
+('Martillo', 8.99, 100, 'Herramientas', 'Martillo de acero con mango de goma'),
+('Destornillador', 3.50, 150, 'Herramientas', 'Destornillador plano y cruz'),
+('Casco Amarillo', 12.00, 50, 'Casco', 'Casco de seguridad estándar'),
+('Casco Blanco', 13.50, 30, 'Casco', 'Casco de seguridad para supervisor'),
+('Ladrillo Rojo', 0.45, 1000, 'Ladrillos', 'Ladrillo macizo rojo'),
+('Bloque de Hormigón', 0.75, 800, 'Ladrillos', 'Bloque hueco para muros'),
+('Enchufe Doble', 2.20, 200, 'Enchufes', 'Enchufe doble estándar'),
+('Foco LED 9W', 1.80, 300, 'Focos', 'Foco LED luz blanca fría'),
+('Interruptor', 1.50, 250, 'Instalaciones', 'Interruptor simple'),
+('Multímetro', 25.00, 40, 'Accesorios', 'Multímetro digital básico'),
+('Teflón', 0.90, 500, 'Mantenimiento', 'Cinta de teflón para cañerías'),
+('Llave Inglesa', 6.80, 75, 'Herramientas', 'Llave ajustable de acero'),
+('Enchufe Industrial', 4.60, 100, 'Enchufes', 'Enchufe para alto voltaje'),
+('Foco Halógeno', 2.10, 120, 'Focos', 'Foco halógeno para exteriores'),
+('Pasta de Soldar', 1.20, 220, 'Mantenimiento', 'Pasta para facilitar soldaduras');
+
+INSERT INTO USERS (NOMBRE, PASSWORD) VALUES
+('juanp@mail.com', '123456'),
+('ana.ram@mail.com', 'abcdef'),
+('clopez@mail.com', 'pass123'),
+('lmart@mail.com', 'clave12'),
+('psoto@mail.com', 's3cret'),
+('mrojas@mail.com', 'qwerty'),
+('mvera@mail.com', 'mypass'),
+('jsilva@mail.com', '098765'),
+('rgomez@mail.com', 'pass987'),
+('cherrera@mail.com', 'admin12'),
+('mcastro@mail.com', 'abcd12'),
+('vreyes@mail.com', 'valen21'),
+('dnavarro@mail.com', 'diegop'),
+('saraya@mail.com', '123abc'),
+('ifuentes@mail.com', 'n4ch0');
+
+
+INSERT INTO COMPRAS (ID_USER, ID_ITEM, CANTIDAD, FECHA) VALUES
+(1, 1, 2, '2024-01-10'),
+(2, 3, 1, '2024-01-11'),
+(3, 4, 1, '2024-01-12'),
+(4, 2, 3, '2024-01-13'),
+(5, 6, 20, '2024-01-14'),
+(6, 8, 4, '2024-01-15'),
+(7, 7, 5, '2024-01-16'),
+(8, 9, 2, '2024-01-17'),
+(9, 10, 1, '2024-01-18'),
+(10, 5, 100, '2024-01-19'),
+(11, 11, 3, '2024-01-20'),
+(12, 12, 2, '2024-01-21'),
+(13, 13, 1, '2024-01-22'),
+(14, 14, 6, '2024-01-23'),
+(15, 15, 2, '2024-01-24');
+
+INSERT INTO VENTAS (ID_USER, ID_ITEM, CANTIDAD, FECHA) VALUES
+(1, 1, 1, '2024-02-01'),
+(2, 2, 2, '2024-02-02'),
+(3, 3, 1, '2024-02-03'),
+(4, 4, 1, '2024-02-04'),
+(5, 5, 50, '2024-02-05'),
+(6, 6, 10, '2024-02-06'),
+(7, 7, 3, '2024-02-07'),
+(8, 8, 5, '2024-02-08'),
+(9, 9, 4, '2024-02-09'),
+(10, 10, 1, '2024-02-10'),
+(11, 11, 6, '2024-02-11'),
+(12, 12, 3, '2024-02-12'),
+(13, 13, 2, '2024-02-13'),
+(14, 14, 7, '2024-02-14'),
+(15, 15, 1, '2024-02-15');

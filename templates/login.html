@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <title>Login</title>
+
+</head>
+
+<body>
+  <div class="login-container">
+    <h2>Bienvenido a Ferremas</h2>
+    <p>Loguéate para entrar</p>
+    <form id="loginForm" method="POST" novalidate>
+      <input id="username" name="username" type="text" placeholder="Usuario" required minlength="3" />
+      <span id="user-error" class="error-msg">El usuario debe tener al menos 3 caracteres</span>
+      
+      <input id="password" name="password" type="password" placeholder="Contraseña (6-12 caracteres)" required minlength="6" maxlength="12"/>
+      <span id="pass-error" class="error-msg">
+        La contraseña debe tener entre 6 y 12 caracteres
+      </span>
+      
+      <button type="submit">Entrar</button>
+    </form>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/validations.js') }}"></script>
+
+</body>
+</html>
