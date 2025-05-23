@@ -1,5 +1,6 @@
 from flask import Flask, render_template, url_for, request
 from flask_mysqldb import MySQL
+import MySQLdb.cursors
 from cryptography.fernet import Fernet
 
 
@@ -62,7 +63,7 @@ def ferreteria():
 
 @app.route('/construccion')
 def construccion():
-    cursor = mysql.connection.cursor()
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
     cursor.execute("SELECT * FROM ITEMS")
     items = cursor.fetchall()
     cursor.close()
@@ -75,7 +76,6 @@ def electricidad():
 @app.route('/servicios')
 def servicios():
     return render_template('servicios.html')
-
 
 if __name__ == '__main__':
     app.run(debug=True)

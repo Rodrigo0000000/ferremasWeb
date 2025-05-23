@@ -7,16 +7,37 @@
 {% endblock %}
 {% block body %}
 
-  {% for item in items %}
-    <div class="item-row">
-      <div class="item">{{ item.ID }}</div>
-      <div class="item">{{ item.NOMBRE }}</div>
-      <div class="item">{{ item.PRECIO }}</div>
-      <div class="item">{{ item.DESCRIPCION }}</div>
-      <div class="item">{{ item.CANTIDAD }}</div>
-    </div>
-  {% endfor %}
-
+  <h2>Inventario de Construcción</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Descripción</th>
+        <th>Cantidad</th>
+        <th>Agregar</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in items %}
+        <tr>
+          <td>{{ item.ID_ITEM }}</td>
+          <td>{{ item.NOMBRE }}</td>
+          <td>{{ item.PRECIO }}</td>
+          <td>{{ item.DESCRIPCION }}</td>
+          <td>{{ item.CANTIDAD }}</td>
+          <td>
+            <form action="">
+              <button type="submit" class="btn-agregar">
+                <i class="fa fa-cart-plus"></i> Agregar
+              </button>
+            </form>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 
   <script src="../JS/dropdowns.js"></script>
 
