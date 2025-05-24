@@ -38,10 +38,26 @@ footer {
 
 .sidebar {
   width: 250px;
+  max-width: 100%;
   background-color: #003366;
   color: white;
   padding: 20px 10px;
   transition: transform 0.3s ease;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow: auto;
+  
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .sidebar .dropdown-btn {
