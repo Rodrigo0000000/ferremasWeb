@@ -1,12 +1,45 @@
 {% extends 'base.html' %}
 
-{% block head %}
-  <title>Ferremas Servicios</title>
-{% endblock %}
+{% block head %} 
 
+  <title>Ferremas Servicios</title>
+
+{% endblock %}
 {% block body %}
-  <header>
-    <button type="button" id="title">SERVICIOS</button>
-  </header>
+
+  <h2>Inventario de Servicios</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Descripción</th>
+        <th>Cantidad</th>
+        <th>Agregar</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in items %}
+        <tr>
+          <td>{{ item.ID_ITEM }}</td>
+          <td>{{ item.NOMBRE }}</td>
+          <td>{{ item.PRECIO }}</td>
+          <td>{{ item.DESCRIPCION }}</td>
+          <td>{{ item.CANTIDAD }}</td>
+          <td>
+            <form action="">
+              <button type="button" class="btn-agregar"
+                onclick="agregarAlCarrito('{{ item.ID_ITEM }}', '{{ item.NOMBRE }}', '{{ item.PRECIO }}')">
+                <i class="fa fa-cart-plus"></i> Agregar
+              </button>
+            </form>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <script src="../JS/dropdowns.js"></script>
 
 {% endblock %}

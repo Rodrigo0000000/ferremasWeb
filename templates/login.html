@@ -26,6 +26,12 @@
     </form>
   </div>
 
+  {% if error %}
+  <div class="alert alert-danger">
+      {{ error }}
+  </div>
+  {% endif %}
+
   <script src="{{ url_for('static', filename='js/validations.js') }}"></script>
 
 </body>

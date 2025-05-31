@@ -17,6 +17,18 @@
     <button type="button" id="loginID">Login</button>
   </header>
 
+  <div id="carrito-btn" onclick="toggleCarrito()">
+    🛒
+  </div>
+
+  <div id="carrito-dropdown">
+    <h4>Carrito</h4>
+    <ul id="carrito-lista"></ul>
+    <p>Total: $<span id="carrito-total">0</span></p>
+    <button onclick="comprar()">Comprar</button>
+  </div>
+
+
   <div class="layout">
     <nav class="sidebar" id="sidebar">
       <button class="dropdown-btn">
@@ -74,5 +86,7 @@
 
   <script src="{{ url_for('static', filename='js/dropdowns.js') }}"></script>
   <script src="{{ url_for('static', filename='js/buttons.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/carrito.js') }}"></script>
+
 </body>
 </html>

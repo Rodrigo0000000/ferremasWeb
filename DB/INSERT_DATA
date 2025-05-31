@@ -1,30 +1,28 @@
+-- Categorías válidas
 INSERT INTO CATEGORIAS (NOMBRE, DESCRIPCION) VALUES
-('Herramientas', 'Herramientas manuales y eléctricas'),
-('Accesorios', 'Accesorios para construcción y ferretería'),
-('Casco', 'Cascos de seguridad industrial'),
-('Ladrillos', 'Ladrillos de arcilla y bloques'),
-('Enchufes', 'Enchufes y tomacorrientes'),
-('Focos', 'Focos LED, halógenos y más'),
-('Instalaciones', 'Materiales para instalaciones eléctricas'),
-('Mantenimiento', 'Productos para mantenimiento y reparación');
+('Construccion', 'Materiales y herramientas para obras'),
+('Electricidad', 'Elementos eléctricos e instalaciones'),
+('Servicios', 'Mantenimiento, accesorios y seguridad');
 
+-- Ítems reagrupados por categoría
 INSERT INTO ITEMS (NOMBRE, PRECIO, CANTIDAD, CATEGORIA, DESCRIPCION) VALUES
-('Martillo', 8.99, 100, 'Herramientas', 'Martillo de acero con mango de goma'),
-('Destornillador', 3.50, 150, 'Herramientas', 'Destornillador plano y cruz'),
-('Casco Amarillo', 12.00, 50, 'Casco', 'Casco de seguridad estándar'),
-('Casco Blanco', 13.50, 30, 'Casco', 'Casco de seguridad para supervisor'),
-('Ladrillo Rojo', 0.45, 1000, 'Ladrillos', 'Ladrillo macizo rojo'),
-('Bloque de Hormigón', 0.75, 800, 'Ladrillos', 'Bloque hueco para muros'),
-('Enchufe Doble', 2.20, 200, 'Enchufes', 'Enchufe doble estándar'),
-('Foco LED 9W', 1.80, 300, 'Focos', 'Foco LED luz blanca fría'),
-('Interruptor', 1.50, 250, 'Instalaciones', 'Interruptor simple'),
-('Multímetro', 25.00, 40, 'Accesorios', 'Multímetro digital básico'),
-('Teflón', 0.90, 500, 'Mantenimiento', 'Cinta de teflón para cañerías'),
-('Llave Inglesa', 6.80, 75, 'Herramientas', 'Llave ajustable de acero'),
-('Enchufe Industrial', 4.60, 100, 'Enchufes', 'Enchufe para alto voltaje'),
-('Foco Halógeno', 2.10, 120, 'Focos', 'Foco halógeno para exteriores'),
-('Pasta de Soldar', 1.20, 220, 'Mantenimiento', 'Pasta para facilitar soldaduras');
+('Martillo', 8.99, 100, 'Construccion', 'Martillo de acero con mango de goma'),
+('Destornillador', 3.50, 150, 'Construccion', 'Destornillador plano y cruz'),
+('Casco Amarillo', 12.00, 50, 'Servicios', 'Casco de seguridad estándar'),
+('Casco Blanco', 13.50, 30, 'Servicios', 'Casco de seguridad para supervisor'),
+('Ladrillo Rojo', 0.45, 1000, 'Construccion', 'Ladrillo macizo rojo'),
+('Bloque de Hormigón', 0.75, 800, 'Construccion', 'Bloque hueco para muros'),
+('Enchufe Doble', 2.20, 200, 'Electricidad', 'Enchufe doble estándar'),
+('Foco LED 9W', 1.80, 300, 'Electricidad', 'Foco LED luz blanca fría'),
+('Interruptor', 1.50, 250, 'Electricidad', 'Interruptor simple'),
+('Multímetro', 25.00, 40, 'Servicios', 'Multímetro digital básico'),
+('Teflón', 0.90, 500, 'Servicios', 'Cinta de teflón para cañerías'),
+('Llave Inglesa', 6.80, 75, 'Construccion', 'Llave ajustable de acero'),
+('Enchufe Industrial', 4.60, 100, 'Electricidad', 'Enchufe para alto voltaje'),
+('Foco Halógeno', 2.10, 120, 'Electricidad', 'Foco halógeno para exteriores'),
+('Pasta de Soldar', 1.20, 220, 'Servicios', 'Pasta para facilitar soldaduras');
 
+-- Usuarios
 INSERT INTO USERS (NOMBRE, PASSWORD) VALUES
 ('juanp@mail.com', '123456'),
 ('ana.ram@mail.com', 'abcdef'),
@@ -42,7 +40,7 @@ INSERT INTO USERS (NOMBRE, PASSWORD) VALUES
 ('saraya@mail.com', '123abc'),
 ('ifuentes@mail.com', 'n4ch0');
 
-
+-- Compras
 INSERT INTO COMPRAS (ID_USER, ID_ITEM, CANTIDAD, FECHA) VALUES
 (1, 1, 2, '2024-01-10'),
 (2, 3, 1, '2024-01-11'),
@@ -60,6 +58,7 @@ INSERT INTO COMPRAS (ID_USER, ID_ITEM, CANTIDAD, FECHA) VALUES
 (14, 14, 6, '2024-01-23'),
 (15, 15, 2, '2024-01-24');
 
+-- Ventas
 INSERT INTO VENTAS (ID_USER, ID_ITEM, CANTIDAD, FECHA) VALUES
 (1, 1, 1, '2024-02-01'),
 (2, 2, 2, '2024-02-02'),
