@@ -28,7 +28,7 @@ FERREMAS es una aplicación web para gestionar productos, usuarios y ventas en u
 1. **Clona el repositorio:**
 
    ```bash
-   git clone [https://github.com/tu-usuario/ferremas.git](https://github.com/Rodrigo0000000/ferremasWeb)
+   git clone https://github.com/Rodrigo0000000/ferremasWeb
    cd ferremasWeb
    ```
 
