@@ -37,7 +37,7 @@ FERREMAS es una aplicación web para gestionar productos, usuarios y ventas en u
    ```bash
    virtualenv venv
    # En Windows
-   venv\Scripts\activate.bat
+   call venv\Scripts\activate.bat
    # En macOS/Linux
    source venv/bin/activate
    ```
@@ -45,7 +45,10 @@ FERREMAS es una aplicación web para gestionar productos, usuarios y ventas en u
 3. **Instala las dependencias necesarias:**
 
    ```bash
-   pip install flask flask_mysqldb cryptography mysqlclient
+   pip install flask
+   pip install flask_mysqldb
+   pip install cryptography
+   pip install mysqlclient
    ```
 
 4. **Configura XAMPP:**
@@ -66,8 +69,8 @@ FERREMAS es una aplicación web para gestionar productos, usuarios y ventas en u
    - Crea y usa la base de datos:
 
      ```sql
-     CREATE DATABASE ferremasWeb;
-     USE ferremasWeb;
+     CREATE DATABASE ferremasdb;
+     USE ferremasdb;
      ```
 
    - Copia y pega el contenido del archivo `.sql` ubicado en la carpeta `DB/` para crear las tablas e insertar los datos.
